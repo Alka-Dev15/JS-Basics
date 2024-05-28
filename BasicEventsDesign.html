@@ -39,21 +39,21 @@
     // timestamp, type, defaultPrevented, target, toElement, srcElement, 
     // currentTarget, ClientX, ClientY, screenX, screenY, altKey, ctrlKey, shiftKey, keyCode
     
-    // document.getElementById('images').addEventListener('click', function (e) {
-    //         console.log("Parent Element clicked");
-    //     }, false)
+    document.getElementById('images').addEventListener('click', function (e) {
+            console.log("Parent Element clicked");
+        }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("Child Element clicked");
-    //     e.stopPropagation()
-    // }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("Child Element clicked");
+        e.stopPropagation()
+    }, false)
 
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log('Only Clicked');
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation()
+        console.log('Only Clicked');
 
-    // })
+    })
 
     document.querySelector('#images').addEventListener('click',function(e){
         //console.log(e.target.parentNode);
