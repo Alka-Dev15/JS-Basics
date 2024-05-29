@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input type="input" id="newEnteredValue">
+    <div id="displayTypedData"></div>
+</body>
+</html>
+<script>
+    const displayEnteredData = document.querySelector('#newEnteredValue');
+    displayEnteredData.addEventListener('keydown', (e) => {
+        document.querySelector('#displayTypedData').textContent = `You have entered ${e.key}`
+    })
+</script>

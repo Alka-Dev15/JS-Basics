@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello This is Edit Element Functionality</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    <ul class="language_ul">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function langNameAdd(langName){
+        const newAddedli = document.createElement('li')
+        newAddedli.innerHTML = langName
+        document.querySelector('.language_ul').appendChild(newAddedli)
+    }
+    //langNameAdd('Python')
+    //langNameAdd('Go Lang')
+
+    function newWayToAddLanguage(langName){
+        const newAddLi = document.createElement('li')
+        newAddLi.appendChild(document.createTextNode(langName))
+        document.querySelector('.language_ul').appendChild(newAddLi)
+    }
+
+    newWayToAddLanguage('Python')
+    newWayToAddLanguage('Go Lang')
+
+    // Edit language
+
+    const langNameVal = document.querySelector('li:nth-child(2)'); 
+    const newElementCreation = document.createElement('li')
+    newElementCreation.textContent = "Mojo"
+    langNameVal.replaceWith(newElementCreation)
+
+    // Edit language
+    
+    const updateLangNameVal = document.querySelector('li:first-child')
+    updateLangNameVal.outerHTML = "<li>TypeScript</li>"
+    // const  updatedNameVal = document.createElement('li')
+    // updatedNameVal.textContent = "Java"
+    // updateLangNameVal.replaceWith(updateLangNameVal)
+
+    //  Remove Element
+
+    const lastChildValue = document.querySelector('li:last-child')
+    lastChildValue.remove()
+</script>
+</html>

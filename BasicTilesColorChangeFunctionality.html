@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .title{
+        width: 25%;
+        height: 100px;
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+        <div class="title"></div>
+    </div>
+</body>
+</html>
+<script>
+    function randomNumber(number){
+        return Math.floor(Math.random() * (number + 1))
+    }
+    const containerValue = document.querySelector('#container')
+    containerValue.addEventListener('click', function(e){
+        e.target.style.backgroundColor = `rgb(${randomNumber(255)} ${randomNumber(255)} ${randomNumber(255)})`
+    })
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <button id="change_color_button">Change Color</button>
+</body>
+</html>
+<script>
+    function randomColor(number){
+        return Math.floor(Math.random() * (number + 1))
+    }
+
+    const buttonColor = document.querySelector('#change_color_button');
+
+    buttonColor.addEventListener('mouseover', function(){
+        document.querySelector('body').style.backgroundColor = `rgb(${randomColor(255)} ${randomColor(255)}  ${randomColor(255)})`
+    },false)
+
+    buttonColor.addEventListener('mouseout', function(){
+        document.querySelector('body').style.backgroundColor = `rgb(255,255,255)`
+    },false)
+</script>
