@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or Javascript</h1>
+    <button id="startButtonStart">Start</button>
+    <button id="cancelButtonStop">Stop</button>
+</body>
+<script>
+    function randomColorGenerator(){
+        const hex = "0123456789ABCDEF"
+        let colorChanger = '#'
+        for(i = 0; i < 6; i++){
+            colorChanger += hex[Math.floor(Math.random() * 16)]
+        }
+        return colorChanger;
+    }
+    let displayingDataVal;
+    const startChangingColor = function(){
+        if(!displayingDataVal){
+            displayingDataVal = setInterval(displayRandomColors, 1000)
+        }
+        function displayRandomColors(){
+            document.body.style.backgroundColor = randomColorGenerator()
+        }
+    }
+
+    const stopChangingColor = function(){
+        clearInterval(displayingDataVal)
+        displayingDataVal = null
+    }
+
+    document.querySelector('#startButtonStart').addEventListener('click', startChangingColor)
+
+    document.querySelector('#cancelButtonStop').addEventListener('click', stopChangingColor)
+</script>
+</html>

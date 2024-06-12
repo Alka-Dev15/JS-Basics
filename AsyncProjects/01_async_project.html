@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or Code</h1>
+    <button id="cancelButtonStop">Stop</button>
+</body>
+<script>
+    const displayMyName = function () {
+        console.log("Alka is in Google");
+    }
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'Alka is perfectly set in Google'
+    }
+    const changeName = setTimeout(changeText, 2000)
+
+    document.querySelector('#cancelButtonStop').addEventListener('click',function(){
+        clearTimeout(changeName)
+        console.log("Value Stopped");
+    })
+
+    
+</script>
+</html>

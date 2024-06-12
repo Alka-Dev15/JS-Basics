@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai or Javascript</h1>
+    <button id="startButtonStart">Start</button>
+    <button id="cancelButtonStop">Stop</button>
+</body>
+<script>
+    let intervalId;
+    const sayDateValue = function () {
+        intervalId = setInterval(() => {
+            console.log("Hello Alka Welcome Google", Date.now());
+        },2000)
+    }
+
+    document.querySelector("#startButtonStart").addEventListener('click', sayDateValue)
+    
+    document.querySelector("#cancelButtonStop").addEventListener('click', function(){
+        clearInterval(intervalId)
+    })
+</script>
+
+</html>
